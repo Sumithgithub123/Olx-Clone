@@ -1,0 +1,87 @@
+.postmoreView {
+  margin-top: .5rem;
+  padding: 16px 16px 32px;
+  background-color: #ebeeef;
+  border-radius: 4px;
+}
+
+.postheading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.postheading :first-child {
+  font-size: 24px;
+  color: #002f34;
+}
+
+.postheading :last-child {
+  font-size: 14px;
+  color: #002f34;
+}
+
+.postrecommendations .postcards {
+  white-space:nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.postmoreView .postcards {
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.postcard {
+  margin-top: .3rem;
+  padding: 20px;
+  max-width: 222px;
+  width: 222px;
+  height: 270px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: white;
+  margin-right: 1rem;
+}
+
+.postcard .postfavorite {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.postcard .postimage img {
+  height: 100px;
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  text-align: center;
+}
+.postcard .content .rate {
+  margin-top: 10px;
+  font-size: larger;
+  font-weight: bold;
+}
+.postcard .content .kilometer {
+  font-size: medium;
+}
+.postcard .content .name {
+  font-size: small;
+}
+.postcard .date {
+  display: flex;
+  justify-content: flex-end;
+  font-size: small;
+}
+
+.postrecommendations {
+  margin-top: .7rem;
+  background-color: #ebeeef;
+  padding: 16px 16px 32px;
+}
+
+.postrecommendations .postheading span {
+  font-size: 24px;
+  color: #002f34;
+}
