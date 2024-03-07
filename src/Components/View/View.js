@@ -4,6 +4,7 @@ import './View.css';
 import { postContext } from '../../store/postcontext';
 import { db } from '../../firebase/config';
 import { collection, getDocs, where } from 'firebase/firestore';
+import Loading1 from '../../assets/loading1'
 function View() {
   var data;
   let [userdetail,setuserdetail] = useState()
@@ -37,7 +38,7 @@ function View() {
           {userdetail? <div>
           <p>{ userdetail.username}</p>
           <p>{ userdetail.phonenumber}</p>
-          </div>:<div>Loading...</div>}
+          </div>:<div><Loading1/></div>}
         </div>
       </div>
     </div>

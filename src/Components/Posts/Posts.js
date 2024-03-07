@@ -5,10 +5,12 @@ import { db } from '../../firebase/config';
 import { collection, getDocs } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import { postContext } from '../../store/postcontext';
+import Loading1 from '../../assets/loading1';
 
 function Posts() {
   let {setpostdetail} = useContext(postContext)
   const [products,setproducts] = useState([])
+  const [load,setload] = useState(true)
   const navigate = useNavigate()
   useEffect(()=>{
     getDocs(collection(db,'products')).then((data)=>{
@@ -19,6 +21,7 @@ function Posts() {
         }
       })
       setproducts(allpost)
+      setload(false)
     })
   },[])
  
@@ -30,7 +33,7 @@ function Posts() {
           <span>View more</span>
         </div>
         <div className="postcards">
-          {products? products.map((obj)=>{
+          { products.map((obj)=>{
             return(
               <div onClick={()=>{
                 setpostdetail(obj)
@@ -52,7 +55,8 @@ function Posts() {
             </div>
           </div>
             )
-          }) : ''}
+          }) }
+          {load && <Loading1/>}
         </div>
       </div>
       <div className="postrecommendations">
